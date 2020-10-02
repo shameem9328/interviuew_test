@@ -58,7 +58,6 @@ class  Website(Website):
         qcontext = request.params.copy()
         qcontext['st']=fields.Boolean(default=False)
         qcontext['customerlist']= request.env['res.partner'].sudo().search([])
-        leadcustomers=request.env['crm.lead'].sudo().search([])
         if post:
             print("post",post)
             name=post.get('name')
