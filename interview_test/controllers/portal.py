@@ -51,8 +51,7 @@ class  Website(Website):
     
     @http.route(['/get_interview_test_form'], type='http', auth='public', website=True, sitemap=False)
     def get_interview_test_form(self, *args, **post):
-        #value = {'header': False,'brands':False}
-        #if post.get('label'):
+      
         qcontext = request.params.copy()
         qcontext['st']=fields.Boolean(default=False)
         qcontext['customerlist']= request.env['res.partner'].sudo().search([])
