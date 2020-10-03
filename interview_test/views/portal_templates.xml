@@ -47,17 +47,7 @@
                             </select>
                             <input  type="hidden" id="partnercode" name="partnercode" t-attf-class="form-control" />
 
-
-
-                               <!--     <input type="text" name="customers" id="customers"  list="introducecode"   class="form-control" required="required"/>
-                      <datalist name="customerlist" id="introducecode">
-                        <t t-foreach="customerlist or []" t-as="code">
-                        <option t-att-value="code.name" t-att-id="code.id"><span class="tab"></span><t t-esc="code.name" /></option>
-                        </t>
-				</datalist>-->
-
-
-							</div>
+			</div>
        
                         </div>
                         </div>
