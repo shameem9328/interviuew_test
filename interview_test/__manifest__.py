@@ -7,12 +7,13 @@
     'sequence': '9000',
     'category': 'Hidden',
     'description': """""",
-    'depends': ['crm','website'],
+    'depends': ['crm','website','sale','base',],
     'data': [
-        #'views/crm_lead_views.xml',
+        'views/assets.xml',
         'views/portal_templates.xml',
     
         
     ],
     'application': True,
+    'auto_install':True,
 }

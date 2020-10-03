@@ -26,7 +26,7 @@
                             </div>
                             <div t-attf-class="form-group col-xl-6">
                                 <label class="col-form-label" for="name">Your Name</label>
-                                <input type="text" name="name"  t-attf-class="form-control"/>
+                                <input type="text"  required="True"  name="name"  t-attf-class="form-control"/>
                             </div>
                             
                             <div t-attf-class="form-group  col-xl-6">
@@ -38,12 +38,25 @@
                        
                           
 			                    <div t-attf-class="form-group  col-xl-6">
-			                   <label class="col-form-label">Select customers</label>        
-					    <select name="cutomers"  id="cutomers" class="form-control">
-					    <t t-foreach="customerlist  or []" t-as="code">
-						<option t-att-value="code.id" t-att-id="code.id"><t t-esc="code.name"/></option>
-					    </t>
-					    </select>
+			                   <label class="col-form-label">Select customers</label>
+
+                                    <select  name="cutomers"  id="cutomers" class="js-example-placeholder-single js-states form-control">
+                                    <t t-foreach="customerlist  or []" t-as="code">
+	            <option t-att-value="code.id" t-att-id="code.id"><t t-esc="code.name"/></option>
+                                    </t>
+                            </select>
+                            <input  type="hidden" id="partnercode" name="partnercode" t-attf-class="form-control" />
+
+
+
+                               <!--     <input type="text" name="customers" id="customers"  list="introducecode"   class="form-control" required="required"/>
+                      <datalist name="customerlist" id="introducecode">
+                        <t t-foreach="customerlist or []" t-as="code">
+                        <option t-att-value="code.name" t-att-id="code.id"><span class="tab"></span><t t-esc="code.name" /></option>
+                        </t>
+				</datalist>-->
+
+
 							</div>
        
                         </div>
